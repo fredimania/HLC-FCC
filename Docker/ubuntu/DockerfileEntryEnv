@@ -1,0 +1,15 @@
+FROM ubuntu:24.04
+
+# USER root
+# ENV NAME="fredi"
+
+RUN apt-get update && apt-get install -yq --no-install-recommends && rm -rf /var/lib/apt/lists/* \
+    curl \
+    nano \
+    net-tools \
+    iputils-ping
+
+COPY start.sh /root
+
+RUN chmod +x /root/start.sh
+ENTRYPOINT ["/root/start.sh"]
