@@ -1,0 +1,12 @@
+#en el contenedor ejecuta
+ssh-keygen
+
+#~ruta deploy
+ls /home/fredi/.ssh/
+ls -ls /home/fredi/.ssh
+#copia la llave
+cat /home/fredi/.ssh/id_rsa.pub 
+
+
+#imagen docker en la ruta proyecto caravaneando
+docker-compose --env-file .env -f docker-compose.yml up -d --build

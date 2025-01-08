@@ -1,5 +1,0 @@
-docker biuld -t fredicconislla/miubuntu .
-docker run -v ./logs:/root/logs --name miservidor -e USUARIO=root -e PROCESO=tail fredicconislla/miubuntu
-
-#config 
-fredicc@fredicc-VMware-Virtual-Platform:~/HLC-FCC/Docker/ubuntu$ docker compose --env-file .env -f  docker-compose.yml config
